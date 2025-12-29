@@ -306,6 +306,7 @@
       document.getElementById('resultCode').textContent = `【 ${mbti} 】`;
       document.getElementById('resultType').textContent = typeData.name;
       document.getElementById('resultSubtitle').textContent = typeData.subtitle;
+      document.getElementById('resultType').textContent = resultType.name;
       document.getElementById('resultDesc').textContent = typeData.desc;
       
       // ロール表示
@@ -372,3 +373,4 @@
     }
 
     init();
+
