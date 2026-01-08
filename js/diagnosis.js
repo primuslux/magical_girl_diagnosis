@@ -1,4 +1,4 @@
-     // MBTI完全対応の診断システム
+    // MBTI完全対応の診断システム
     // E/I, S/N, T/F, J/P の4軸で判定
     
     const questions = [
@@ -146,98 +146,98 @@
     // 16タイプの定義（あなたの設定）
     const mbtiTypes = {
       'INFJ': { 
-        subtitle: '共感と祈り',
         name: '希望の祈り子',
+        subtitle: '共感と祈り',
         roles: ['防御', '支援'],
         desc: '他人の苦しみを深く感じ、救いたいという願いが力となる。静けさの中に揺るぎない意志を秘め、他者の痛みに寄り添う魔法少女。祈りの力で世界の歪みに抗う。'
       },
       'ENTP': { 
-        subtitle: '革新と挑戦',
         name: '反逆の火種',
+        subtitle: '革新と挑戦',
         roles: ['妨害', '独立'],
         desc: '停滞を嫌い、常に新しい風穴を開ける異端の革命児。理から逸脱しながらも、希望の火種を蒔き続ける革命的魔法少女。常識を破る発想力で未来を変える。'
       },
       'ISFP': { 
-        subtitle: '感性と静寂',
         name: '花咲く内なる庭',
+        subtitle: '感性と静寂',
         roles: ['回復', '攻撃'],
         desc: '誰にも見せない感情の世界を、大切に咲かせている魔法少女。美しさと儚さを愛し、世界の一瞬一瞬に魔力を注ぐ。心のままに咲く、その姿は優雅で鋭い。'
       },
       'ESTJ': { 
-        subtitle: '指導と責任',
         name: '規律の盾',
+        subtitle: '指導と責任',
         roles: ['攻撃', '防御'],
         desc: '物事をきちんと整理し、混乱を許さず世界を律する力。任務を遂行する力と責任を背負い、揺るがぬ判断で皆を導く。冷静と情熱が交差する魔法少女。'
       },
       'INFP': { 
-        subtitle: '理想と優しさ',
         name: '純心の灯火',
+        subtitle: '理想と優しさ',
         roles: ['支援', '回復'],
         desc: '理不尽な世界でも、心の中の「こうありたい」姿を信じる。壊れやすい優しさの奥に、誰にも消せない強い光を宿す。迷いながらも、想いを抱いて進む魔法少女。'
       },
       'ENFJ': { 
-        subtitle: '思いやりと導き',
         name: '心結びの勇者',
+        subtitle: '思いやりと導き',
         roles: ['攻撃', '支援'],
         desc: '仲間の願いや痛みに敏感で、皆を引き上げようとする慈愛の魔力。仲間の心を繋ぎ、希望の道を照らすカリスマ魔法少女。優しさと責任感で、闇をも導く。'
       },
       'ISTP': { 
-        subtitle: '沈黙と判断',
         name: '機心の造形者',
+        subtitle: '沈黙と判断',
         roles: ['攻撃', '妨害'],
         desc: '彼女の力は、己の身体ではなく、造られたものを通して発揮される。魔力で動く重装ゴーレム、戦場に展開される魔法兵装。それは無感情に見える鉄の意志。'
       },
       'ESFP': { 
-        subtitle: '生きる歓び',
         name: '鮮烈なる舞姫',
+        subtitle: '生きる歓び',
         roles: ['防御', '支援'],
         desc: '「今この瞬間を生きる」ことが誰よりも得意な魔法少女。喜びと生命の爆発をそのまま魔力に変える、祝祭の申し子。その存在は戦場すら明るく照らす。'
       },
       'INTJ': { 
-        subtitle: '信念と戦略',
         name: '静謐なる星読み',
+        subtitle: '信念と戦略',
         roles: ['攻撃', '独立'],
         desc: '誰にも理解されなくても、自分の信じた理想へ真っ直ぐに向かう。世界の理を俯瞰し、計画の先に理想を追う孤高の魔法少女。心の奥に秘めた信念は誰よりも強い。'
       },
       'ENTJ': { 
-        subtitle: '責任と決断',
         name: '王冠を戴く者',
+        subtitle: '責任と決断',
         roles: ['攻撃', '防御'],
         desc: '感情を制し、理と力で世界を支配する側に立つ宿命。揺るぎなき指揮と戦略眼で世界のバランスを保つ。冷徹に見えて、その奥には強い守護の意志がある。'
       },
       'INTP': { 
-        subtitle: '好奇心と分析',
         name: '真理の探究者',
+        subtitle: '好奇心と分析',
         roles: ['攻撃', '妨害'],
         desc: '感情より論理に共鳴し、世界の裏側を知ることに心を燃やす。答えを求め、誰も踏み込まぬ世界へ魔力を延ばす知性の魔法少女。理論の果てに希望を見い出す。'
       },
       'ESTP': { 
-        subtitle: '闘争と快感',
         name: '本能の跳弾',
+        subtitle: '闘争と快感',
         roles: ['攻撃', '支援'],
         desc: '恐れず、止まらず、本能に従い突破する激しい魂。危険を恐れず、刹那の判断で戦場を駆け抜ける。勝利に酔い、敗北すら楽しむ本能型魔法少女。'
       },
       'ESFJ': { 
-        subtitle: '包容と安心',
         name: '優しき灯台守',
+        subtitle: '包容と安心',
         roles: ['支援', '回復'],
         desc: '自分を後回しにしてでも、誰かの心を支えようとする優しさ。他者の痛みを自分のものとし、支え合いの魔法で仲間を癒やす。温かな優しさが世界に広がる。'
       },
       'ISTJ': { 
-        subtitle: '誠実と継続',
         name: '正しき遺志継ぐ者',
+        subtitle: '誠実と継続',
         roles: ['防御', '妨害'],
         desc: '約束を守ること、正しいことを貫くことに宿る力。理と規律を重んじ、安定を支える魔法少女。小さな揺らぎさえも許さず、静かに世界を守り続ける。'
       },
       'ISFJ': { 
-        subtitle: '優しさと記憶',
         name: '記憶守る癒やし手',
+        subtitle: '優しさと記憶',
         roles: ['防御', '支援'],
-        desc: '誰かが残した小さな幸せを守りたいという願いが力になる。傷ついた者に寄り添い、そっと癒やしを与える魔法少女。過去を忘れず、誰かを守る力となる。。'
+        desc:  '誰かが残した小さな幸せを守りたいという願いが力になる。傷ついた者に寄り添い、そっと癒やしを与える魔法少女。過去を忘れず、誰かを守る力となる。'
       },
       'ENFP': { 
-        subtitle: '自由と情熱',
         name: '想像の風渡り',
+        subtitle: '自由と情熱',
         roles: ['攻撃', '支援'],
         desc: '感じるまま、笑い泣き叫びながら生きることが魔力の源。自由奔放な心で、新たな世界を切り拓く。無数の感情をまとい、予測不能な未来を形作る魔法少女。'
       }
@@ -295,18 +295,46 @@
       return type;
     }
 
+    // タイプの強度を計算（そのタイプにどれだけ当てはまっているか）
+    function calculateTypeStrength(mbti, params) {
+      const scores = {
+        'E': params.E, 'I': params.I,
+        'S': params.S, 'N': params.N,
+        'T': params.T, 'F': params.F,
+        'J': params.J, 'P': params.P
+      };
+      
+      // MBTIタイプの各文字のスコアを合計
+      let strength = 0;
+      for (let char of mbti) {
+        strength += scores[char];
+      }
+      
+      // 強度を3段階で判定
+      // 理論上の最大値は49（E13+N10+F18+P8）
+      // 実際の範囲は約20〜45
+      if (strength >= 38) {
+        return { level: 'high', label: '高純度', score: strength };
+      } else if (strength >= 30) {
+        return { level: 'mid', label: '標準', score: strength };
+      } else {
+        return { level: 'low', label: 'タイプ混在', score: strength };
+      }
+    }
+
     function showResult() {
       const mbti = calculateMBTI();
       const typeData = mbtiTypes[mbti];
+      const strengthData = calculateTypeStrength(mbti, params);
       
       document.getElementById('questionArea').style.display = 'none';
       document.getElementById('progress').style.display = 'none';
       document.getElementById('resultArea').classList.add('show');
       
-      document.getElementById('resultCode').textContent = `【 ${mbti} 】`;
+      // タイプコードに強度ラベルを追加
+      document.getElementById('resultCode').textContent = `【 ${mbti} - ${strengthData.label} 】`;
       document.getElementById('resultType').textContent = typeData.name;
       document.getElementById('resultSubtitle').textContent = typeData.subtitle;
-      document.getElementById('resultType').textContent = resultType.name;
       document.getElementById('resultDesc').textContent = typeData.desc;
       
       // ロール表示
@@ -322,6 +350,20 @@
       // パラメータ表示
       const paramsDiv = document.getElementById('resultParams');
       paramsDiv.innerHTML = '<h3 style="margin-bottom: 15px; color: #764ba2;">あなたの性格傾向（MBTI）</h3>';
+      
+      // 強度情報を追加
+      const strengthInfo = document.createElement('div');
+      strengthInfo.style.cssText = 'background: linear-gradient(135deg, #667eea20 0%, #764ba220 100%); padding: 15px; border-radius: 8px; margin-bottom: 20px; text-align: center;';
+      strengthInfo.innerHTML = `
+        <div style="font-weight: bold; color: #764ba2; margin-bottom: 5px;">タイプ純度</div>
+        <div style="font-size: 24px; font-weight: bold; color: #667eea;">${strengthData.score} / 49</div>
+        <div style="font-size: 14px; color: #888; margin-top: 5px;">
+          ${strengthData.level === 'high' ? '完全にこのタイプです！' : 
+            strengthData.level === 'mid' ? '典型的なこのタイプです' : 
+            'このタイプの傾向がありますが、他の要素も混ざっています'}
+        </div>
+      `;
+      paramsDiv.appendChild(strengthInfo);
       
       const axes = [
         { left: 'E', leftName: '外向', right: 'I', rightName: '内向' },
@@ -342,8 +384,8 @@
         row.innerHTML = `
           <div style="width: 100%;">
             <div class="param-labels">
-              <span class="param-label ${isLeft ? 'active' : ''}">${axis.leftName} (${axis.left})</span>
-              <span class="param-label ${!isLeft ? 'active' : ''}">${axis.rightName} (${axis.right})</span>
+              <span class="param-label ${isLeft ? 'active' : ''}">${axis.leftName} (${axis.left}): ${leftVal}</span>
+              <span class="param-label ${!isLeft ? 'active' : ''}">${axis.rightName} (${axis.right}): ${rightVal}</span>
             </div>
             <div class="param-bar-container">
               <div class="param-bar" style="width: ${leftPct}%"></div>
@@ -353,14 +395,45 @@
         paramsDiv.appendChild(row);
       });
       
-      // 画像設定
+      // 画像設定（強度に応じて変更）
       const typeIndex = Object.keys(mbtiTypes).indexOf(mbti);
       const typeId = String(typeIndex + 1).padStart(2, '0');
-      document.getElementById('resultImage').src = `./img/type${typeId}.png`;
       
-      document.getElementById('resultImage').onerror = function() {
-        this.style.display = 'none';
+      // 強度に応じた画像パスを生成
+      // 優先順位: type01_high.png → type01_mid.png → type01_low.png → type01.png
+      const imageVariants = [
+        `./img/type${typeId}_${strengthData.level}.png`,  // 強度別
+        `./img/type${typeId}.png`                          // 標準（フォールバック）
+      ];
+      
+      // 画像を順番に試す
+      let imageIndex = 0;
+      const tryLoadImage = () => {
+        if (imageIndex < imageVariants.length) {
+          const img = document.getElementById('resultImage');
+          img.src = imageVariants[imageIndex];
+          img.onerror = () => {
+            imageIndex++;
+            tryLoadImage();
+          };
+          img.onload = () => {
+            img.style.display = 'block';
+          };
+        } else {
+          // 全ての画像が見つからない場合
+          document.getElementById('resultImage').style.display = 'none';
+        }
       };
+      
+      tryLoadImage();
+      
+      // デバッグ情報（開発用・後で削除可能）
+      console.log('診断結果:', {
+        mbti: mbti,
+        strength: strengthData,
+        params: params,
+        imagePath: imageVariants[0]
+      });
     }
 
     function restart() {
@@ -373,4 +446,3 @@
     }
 
     init();
-
